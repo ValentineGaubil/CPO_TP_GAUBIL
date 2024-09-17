@@ -1,3 +1,5 @@
+package tp0_ex1;
+
 
 import java.util.Scanner;
 

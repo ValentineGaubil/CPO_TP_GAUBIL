@@ -27,8 +27,13 @@ public class Calculator {
         int opérator;
         int operande1;
         int operande2;
-         System.out.println("veuillez entrer un nombre");
+         System.out.println("veuillez entrer un chiffre");
           System.out.println("veuillez entrer un nombre");
+          System.out.println("veuillez entrer un nombre");
+          operande2 = sc.nextInt();
+          
+          
+      
           
         
         

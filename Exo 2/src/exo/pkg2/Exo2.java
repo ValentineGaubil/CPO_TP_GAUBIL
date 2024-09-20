@@ -1,8 +1,8 @@
 /*
- * GAUBIL
+ * GAUBIL Valentine
  * TDC
- * TP0 exercice 1 
- * 17 septembre 2024
+ * TP0 exercice 2
+ * 17 et 20 septembre 2024
  */
 package exo.pkg2;
 

@@ -1,7 +1,7 @@
 /*
 *GAUBIL Valentine
 *TDC
-*TP1 exercice 3
+*TP1 exercice 4
 * 27 septembre 2024 
 */
 package tp1_stats_gaubilvalentine;

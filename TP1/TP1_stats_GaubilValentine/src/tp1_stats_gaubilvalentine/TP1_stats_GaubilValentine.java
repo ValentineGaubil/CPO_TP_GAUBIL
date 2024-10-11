@@ -19,70 +19,127 @@ public class TP1_stats_GaubilValentine {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         Random generateurAleat = new Random();
+        Scanner sc = new Scanner(System.in);
        
-        int [] tableau = new int[6];
-        for (int i = 0; i<6; i++) {
-            tableau [i] = 0;
-            System.out.print(tableau[i]);
+        for (int i = 1; i<=5; i++){
+            int n = generateurAleat.nextInt(100);
+            System.out.print(n + " ");
+
         }
        
-        System.out.println(" ");
+       System.out.println(" ");
+        int nb;
+        int nombre;
+        int compteur;
+        int niveau;
        
+        System.out.println("1) Facile");
+        System.out.println("2) Normal");
+        System.out.println("3) Difficile");
+        System.out.println("Veuillez saisir le numero du niveau de difficulte que vous avez choisi :");
+        niveau = sc.nextInt();
        
-        int m;
-        System.out.println("Veuillez entrer un nombre :");
-        m = sc.nextInt();
-       
-        int [] tab = new int[m];
-       
-        for (int i = 0; i<m; i++){
-            tab [i] = generateurAleat.nextInt(5);
-            System.out.print(tab[i]);
+        if (niveau == 1){
+            nb = generateurAleat.nextInt(70);
+            compteur = 1;
+            System.out.println("Veuillez saisir un nombre entre 0 et 70 :");
+            nombre = sc.nextInt();
+            while (nombre != nb) {
+                if (nb>(nombre+15)){
+                    System.out.println("Beaucoup trop petit");
+                    System.out.println("Veuillez saisir un nombre plus grand :");
+                    nombre = sc.nextInt();
+                    compteur += 1;
+                }
+               
+                else if (nb>nombre){
+                    System.out.println("Trop petit");
+                    System.out.println("Veuillez saisir un nombre plus grand :");
+                    nombre = sc.nextInt();
+                    compteur += 1;
+                }
+               
+                else if (nb<(nombre-15)){
+                    System.out.println("Beaucoup trop grand");
+                    System.out.println("Veuillez saisir un nombre plus petit :");
+                    nombre = sc.nextInt();
+                    compteur += 1;
+                }
+                   
+                else {
+                    System.out.println("Trop grand");
+                    System.out.println("Veuillez saisir un nombre plus petit :");
+                    nombre = sc.nextInt();
+                    compteur += 1;
+                }
+            }
+            System.out.println("Vous avez gagne");
+            System.out.println("Vous avez effectue " + compteur + " coups");
         }
        
-        System.out.println(" ");
        
-        double nb0 = 0;
-        double nb1 = 0;
-        double nb2 = 0;
-        double nb3 = 0;
-        double nb4 = 0;
-        double nb5 = 0;
+        else if (niveau == 2){
+            nb = generateurAleat.nextInt(100);
+            compteur = 1;
+            System.out.println("Veuillez saisir un nombre entre 0 et 100 :");
+            nombre = sc.nextInt();
+            while (nombre != nb) {
+                if (nb>nombre){
+                    System.out.println("Trop petit");
+                    System.out.println("Veuillez saisir un nombre plus grand :");
+                    nombre = sc.nextInt();
+                    compteur += 1;
+                }
+           
+                else {
+                    System.out.println("Trop grand");
+                    System.out.println("Veuillez saisir un nombre plus petit :");
+                    nombre = sc.nextInt();
+                    compteur += 1;
+                }
+            }
+            System.out.println("Vous avez gagne");
+            System.out.println("Vous avez effectue " + compteur + " coups");
+        }
        
-        for (int i=0; i<tab.length; i++) {
-            if (tab [i]==0) {
-                nb0 += 1;
+       
+        else if (niveau == 3){
+            nb = generateurAleat.nextInt(200);
+            compteur = 1;
+            System.out.println("Veuillez saisir un nombre entre 0 et 200 :");
+            System.out.println("Vous avez 7 coups");
+            nombre = sc.nextInt();
+            while (nombre != nb && compteur<7) {
+                if (nb>nombre){
+                    System.out.println("Trop petit");
+                    System.out.println("Veuillez saisir un nombre plus grand :");
+                    nombre = sc.nextInt();
+                    compteur += 1;
+                }
+           
+                else {
+                    System.out.println("Trop grand");
+                    System.out.println("Veuillez saisir un nombre plus petit :");
+                    nombre = sc.nextInt();
+                    compteur += 1;
+                }
             }
            
-            if (tab [i]==1) {
-                nb1 += 1;
+            if (nb == nombre) {
+                System.out.println("Vous avez gagne");
+                System.out.println("Vous avez effectue " + compteur + " coups");
             }
            
-            if (tab [i]==2) {
-                nb2 += 1;
-            }
-           
-            if (tab [i]==3) {
-                nb3 += 1;
-            }
-           
-            if (tab [i]==4) {
-                nb4 += 1;
-            }
-           
-            if (tab [i]==5) {
-                nb5 += 1;
+            else if (nb != nombre) {
+            System.out.println("Vous avez perdu");
+            System.out.println("Vous avez effectue " + compteur + " coups");
             }
         }
        
-        System.out.println("On a obtenu :");
-        System.out.println((nb0/m)*100 + " % de " + 0);
-        System.out.println((nb1/m)*100 + " % de " + 1);
-        System.out.println((nb2/m)*100 + " % de " + 2);
-        System.out.println((nb3/m)*100 + " % de " + 3);
-        System.out.println((nb4/m)*100 + " % de " + 4);
-        System.out.println((nb5/m)*100 + " % de " + 5);
+       
+        else {
+            System.out.println("La saisie est incorrecte, veuillez recommencer.");
+        }
     }
 }

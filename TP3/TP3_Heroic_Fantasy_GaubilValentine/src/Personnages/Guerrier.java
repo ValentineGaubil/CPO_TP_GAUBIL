@@ -27,12 +27,3 @@ public class Guerrier extends Personnage {
     }
 }
 
-Interfece etrevivant :
-package tp3_heroic_fantasy_brillet;
-
-
-public interface EtreVivant {
-    void seFatiguer();
-    boolean estVivant();
-    void estAttaque(int points);
-}

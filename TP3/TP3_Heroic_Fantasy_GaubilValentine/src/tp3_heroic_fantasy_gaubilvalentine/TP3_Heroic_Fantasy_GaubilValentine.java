@@ -6,12 +6,10 @@
  */
 package tp3_heroic_fantasy_gaubilvalentine;
 
-import Personnages.Guerrier;
-import Armes.Epee;
-import Armes.Baton;
-import java.util.ArrayList;
-import Arme.*;
-import personnage.*;
+import Armes.*;
+import Personnages.*;
+
+
 public class TP3_Heroic_Fantasy_GaubilValentine {
 
   

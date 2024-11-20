@@ -6,6 +6,9 @@
 package Armes;
 
 import Armes.Arme;
+import Armes.Baton;
+import Armes.Epee;
+import java.util.ArrayList;
 
 /**
  *
@@ -29,11 +32,3 @@ public class Baton extends Arme {
         return super.toString() + ", Âge: " + age;
     }
 }
-
-Personnage : 
-package Personnages;
-import TP3_Heroic_Fantasy_GaubilValentine
-import Armes.Arme;
-import Armes.Baton;
-import Armes.Epee;
-import java.util.ArrayList;

@@ -3,7 +3,7 @@
  * TP2
  * 13 novembre 2024
  */
-package tp3_heroic_fantasy_gaubilvalentine;
+package Personnages;
 
 import Personnages.Personnage;
 
